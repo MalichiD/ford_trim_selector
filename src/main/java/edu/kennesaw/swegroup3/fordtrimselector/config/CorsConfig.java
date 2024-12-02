@@ -17,7 +17,7 @@ public class CorsConfig {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOriginPatterns(Arrays.asList("http://localhost:5173", "https://ford-trim-selector-frontend.vercel.app"));
+        config.setAllowedOriginPatterns(Arrays.asList("http://localhost:5173", "https://ford-trim-selector-frontend.vercel.app", "https://4f47-35-151-153-4.ngrok-free.app/"));
         config.setAllowedHeaders(Arrays.asList("*"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"));
         source.registerCorsConfiguration("/**", config);
@@ -30,7 +30,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOriginPatterns("http://localhost:5173", "https://ford-trim-selector-frontend.vercel.app")
+                        .allowedOriginPatterns("http://localhost:5173", "https://ford-trim-selector-frontend.vercel.app", "https://4f47-35-151-153-4.ngrok-free.app/")
                         .allowedMethods("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH")
                         .allowedHeaders("*")
                         .allowCredentials(true);

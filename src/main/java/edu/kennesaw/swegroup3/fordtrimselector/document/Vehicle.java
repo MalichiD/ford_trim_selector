@@ -17,7 +17,7 @@ import java.util.List;
 public class Vehicle {
 
     @Id
-    private ObjectId id;
+    private String id;
 
     private String model;
     private String year;
@@ -30,7 +30,7 @@ public class Vehicle {
     @NoArgsConstructor
     public static class Trim {
         @Id
-        private ObjectId id;
+        private String id;
         private String name;
         private Integer starting_msrp;
 
